@@ -1,0 +1,30 @@
+@mixin secHeader
+  padding: .6rem 0
+  text-align: center
+  color: #fff
+  font-size: .8rem
+
+@mixin halfOverlay
+  position: absolute
+  top: 0;
+  bottom: 0
+  width: 50%
+  height: 100%
+
+@mixin flexColumn
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+@mixin bgImg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+@mixin responsive($arg...)
+  @if length($arg) == 1
+    @media screen and (max-width: nth($arg, 1))
+      @content
+  @if length($arg) == 2
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2))
+      @content

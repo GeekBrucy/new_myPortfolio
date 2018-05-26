@@ -5,6 +5,9 @@
   <title>Peichun Zhou's Portfolio</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
@@ -16,9 +19,6 @@
           <a href="#section-about">About</a>
         </li>
         <li>
-          <a href="#section-skills">Skills</a>
-        </li>
-        <li>
           <a href="#section-works">Works</a>
         </li>
         <li>
@@ -26,6 +26,16 @@
         </li>
       </ul>
     </nav>
+    <div class="banner">
+      <div class="overlay-l">
+        <h2>I am </h2>
+        <h2>Front End Developer</h2>
+      </div>
+      <div class="overlay-r">
+        <h2>Peichun Zhou</h2>
+        <h2>I am</h2>
+      </div>
+    </div>
   </header>
   <!-- END of header -->
   <section id="section-about">
@@ -33,108 +43,259 @@
       <h1>About Me</h1>
     </div>
     <div class="section-content about-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae iste amet, rem illo ducimus atque perferendis
-        molestias quia voluptatum architecto autem iusto magni provident iure incidunt commodi. Culpa consequuntur repudiandae
-        eligendi, dolorem aliquid, corrupti eos sunt laboriosam natus, aspernatur itaque blanditiis nam earum pariatur cumque?
-        Distinctio est blanditiis quia ipsum, in nemo consectetur consequuntur quae ea reiciendis culpa ipsa odio nisi tenetur
-        ullam facilis aut perspiciatis. Magnam aut optio eos impedit excepturi ea cumque omnis, quas ipsum doloribus consequatur
-        veritatis eius quasi iste vel. Doloremque deleniti pariatur expedita at perspiciatis iure! Repudiandae nulla dolores
-        impedit labore fuga distinctio reprehenderit est!</p>
+      <div class="about-intro">
+        <div class="intro-header">
+          <h2>Little Intro</h2>
+        </div>
+        <div class="intro-content">
+          <p>My Bachelor of IT degree brings me huge interests in programming, but unfortunately I failed get my foot in the
+            industry right after my graduation.</p>
+          <p>During that period, I tried very hard to get myself closer to the IT area. So I taught my self C#, C, Python and
+            so on...</p>
+          <p>My Bachelor of IT degree brings me huge interests in programming, but unfortunately I failed get my foot in the
+            industry right after my graduation.</p>
+          <p>During that period, I tried very hard to get myself closer to the IT area. So I taught my self C#, C, Python and
+            so on...</p>
+        </div>
+      </div>
+      <div class="about-skills">
+        <div class="skills-header">
+          <h2>My Skills</h2>
+        </div>
+        <div class="skills-content">
+          <div class="tab-selection">
+            <label class="active" for="front-end">Front-End</label>
+            <label for="back-end">Back-End</label>
+            <label for="side-skills">Side Skills</label>
+            <label for="soft-skills">Soft Skills</label>
+          </div>
+          <div class="tab-content">
+            <input type="radio" name="skills" id="front-end" checked>
+            <div class="tab-holder">
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>HTML</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-html5-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>CSS</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-css3-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Javascript</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-javascript-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>jQuery</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-jquery-plain colored"></i>
+                  <i class="devicon-jquery-plain colored"></i>
+                  <i class="devicon-jquery-plain colored"></i>
+                  <i class="devicon-jquery-plain colored"></i>
+                  <i class="devicon-jquery-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>VueJs</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-vuejs-plain colored"></i>
+                  <i class="devicon-vuejs-plain colored"></i>
+                  <i class="devicon-vuejs-plain colored"></i>
+                  <i class="devicon-vuejs-plain"></i>
+                  <i class="devicon-vuejs-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Bootstrap</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-bootstrap-plain colored"></i>
+                  <i class="devicon-bootstrap-plain colored"></i>
+                  <i class="devicon-bootstrap-plain colored"></i>
+                  <i class="devicon-bootstrap-plain colored"></i>
+                  <i class="devicon-bootstrap-plain"></i>
+                </div>
+              </div>
+            </div>
+            <input type="radio" name="skills" id="back-end">
+            <div class="tab-holder">
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Python</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-python-plain colored"></i>
+                  <i class="devicon-python-plain colored"></i>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-python-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>C#</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-csharp-plain colored"></i>
+                  <i class="devicon-csharp-plain colored"></i>
+                  <i class="devicon-csharp-plain"></i>
+                  <i class="devicon-csharp-plain"></i>
+                  <i class="devicon-csharp-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>C</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-c-plain colored"></i>
+                  <i class="devicon-c-plain colored"></i>
+                  <i class="devicon-c-plain"></i>
+                  <i class="devicon-c-plain"></i>
+                  <i class="devicon-c-plain"></i>
+                </div>
+              </div>
+            </div>
+            <input type="radio" name="skills" id="side-skills">
+            <div class="tab-holder">
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Git</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-git-plain colored"></i>
+                  <i class="devicon-git-plain colored"></i>
+                  <i class="devicon-git-plain colored"></i>
+                  <i class="devicon-git-plain"></i>
+                  <i class="devicon-git-plain"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Sass</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-sass-original colored"></i>
+                  <i class="devicon-sass-original colored"></i>
+                  <i class="devicon-sass-original colored"></i>
+                  <i class="devicon-sass-original"></i>
+                  <i class="devicon-sass-original"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Webpack</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="devicon-webpack-plain colored"></i>
+                  <i class="devicon-webpack-plain colored"></i>
+                  <i class="devicon-webpack-plain"></i>
+                  <i class="devicon-webpack-plain"></i>
+                  <i class="devicon-webpack-plain"></i>
+                </div>
+              </div>
+            </div>
+            <input type="radio" name="skills" id="soft-skills">
+            <div class="tab-holder">
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Communication</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="fas fa-comment-dots"></i>
+                  <i class="fas fa-comment-dots"></i>
+                  <i class="fas fa-comment-dots"></i>
+                  <i class="fas fa-comment-dots"></i>
+                  <span class="lose-mark">
+                    <i class="fas fa-comment-dots"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Team Player</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="fas fa-users"></i>
+                  <i class="fas fa-users"></i>
+                  <i class="fas fa-users"></i>
+                  <i class="fas fa-users"></i>
+                  <span class="lose-mark">
+                    <i class="fas fa-users"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Can Do Attitude</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Passionate</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="fas fa-battery-full"></i>
+                  <i class="fas fa-battery-full"></i>
+                  <i class="fas fa-battery-full"></i>
+                  <i class="fas fa-battery-full"></i>
+                  <i class="fas fa-battery-full"></i>
+                </div>
+              </div>
+              <div class="skill-detail">
+                <div class="skill-name">
+                  <h3>Willing to Learn</h3>
+                </div>
+                <div class="skill-mark">
+                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- END of section ABOUT -->
-  <section id="section-skills">
-    <div class="section-header skills-header">
-      <h1>My Skills</h1>
-    </div>
-    <div class="section-content skills-content">
-      <div class="tab-selection">
-        <label for="front-end">Front-End</label>
-        <label for="back-end">Back-End</label>
-        <label for="side-skills">Side Skills</label>
-        <label for="soft-skills">Soft Skills</label>
-      </div>
-      <div class="tab-content">
-        <input type="radio" name="skills" id="front-end">
-        <div class="tab-holder">
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>HTML</h3>
-            </div>
-            <div class="skill-mark">
-              <i>HTML icon</i>
-            </div>
-          </div>
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>CSS</h3>
-            </div>
-            <div class="skill-mark">
-              <i>CSS icon</i>
-            </div>
-          </div>
-        </div>
-        <input type="radio" name="skills" id="back-end">
-        <div class="tab-holder">
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>Python</h3>
-            </div>
-            <div class="skill-mark">
-              <i>Python icon</i>
-            </div>
-          </div>
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>C#</h3>
-            </div>
-            <div class="skill-mark">
-              <i>C# icon</i>
-            </div>
-          </div>
-        </div>
-        <input type="radio" name="skills" id="side-skills">
-        <div class="tab-holder">
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>Git</h3>
-            </div>
-            <div class="skill-mark">
-              <i>Git icon</i>
-            </div>
-          </div>
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>CSS</h3>
-            </div>
-            <div class="skill-mark">
-              <i>Some icon</i>
-            </div>
-          </div>
-        </div>
-        <input type="radio" name="skills" id="soft-skills">
-        <div class="tab-holder">
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>Communication</h3>
-            </div>
-            <div class="skill-mark">
-              <i>Communication icon</i>
-            </div>
-          </div>
-          <div class="skill-detail">
-            <div class="skill-name">
-              <h3>Team Player</h3>
-            </div>
-            <div class="skill-mark">
-              <i>Team Player icon</i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END of section SKILLS -->
   <section id="section-works">
     <div class="section-header works-header">
       <h1>My Works</h1>

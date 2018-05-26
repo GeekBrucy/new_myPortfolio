@@ -1,1 +1,110 @@
 @import "./reset.sass", "./variables.sass", "./mixins.sass"
+.pg-header
+  background: $secondaryBg
+  ul
+    display: flex
+    justify-content: center
+    @include responsive(600px)
+      flex-direction: column
+  li
+    padding: .2rem .5rem
+    @include responsive(600px)
+      width: 100%
+      text-align: center
+  a
+    font-size: .5rem
+    color: $mainFontColor
+    display: block
+    padding: .5rem
+    border-radius: .3rem
+    transition: background-color .5s
+    &:hover, &:active
+      background-color: $mainFontColor
+      color: $secondaryBg
+  .banner
+    color: $mainFontColor
+    position: relative
+    min-height: 100vh
+    background-image: url(https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?cs=srgb&dl=background-code-coder-177598.jpg&fm=jpg)
+    @include bgImg
+    font-size: 1.5rem
+    .overlay-l, .overlay-r
+      @include flexColumn
+      @include halfOverlay
+    .overlay-l
+      left: 0
+      background-color: rgba(0, 0, 0,.8)
+      h2
+        text-align: right
+        margin-right: .3rem
+    .overlay-r
+      right: 0
+      background-color: rgba(164, 3, 31, .8)
+      h2
+        text-align: left
+        margin-left: .3rem
+// END of pg-header
+.section-header
+  @include secHeader
+#section-about
+  .about-header
+    background-color: $red
+  .about-content
+    display: flex;
+    font-size: .5rem
+    text-align: center
+    .about-intro, .about-skills
+      width: 50%
+    .intro-header, .skills-header
+      padding: .5rem 0
+      border-bottom: 2px solid $red
+    .skills-header, .skills-content
+      background: $alphaSecondary
+      color: #fff
+    .intro-content, .skills-content
+      padding: 1rem
+      height: 100%
+    .skills-content
+      position: relative
+      .tab-selection
+        width: 100%
+        position: absolute
+        top: 0
+        padding: .25rem 0
+        left: 50%
+        transform: translateX(-50%)
+        label
+          cursor: pointer
+          padding: 0 .5rem
+          border-radius: .3rem
+          transition: all ease .5s
+          &.active, &:hover
+            background-color: #fff
+            color: $secondaryBg
+      .tab-content
+        position: absolute
+        top: 1rem
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        & > div
+          display: none
+      .tab-holder
+        height: 100%
+        padding: .5rem 2rem
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        .skill-detail
+          margin-right: 1rem
+        .skill-name
+          margin-bottom: .5rem
+        .lose-mark
+          color: darken($secondaryBg, 10)
+      input[type=radio]
+        display: none
+        &:checked + div
+          display: flex
+// END of about section
