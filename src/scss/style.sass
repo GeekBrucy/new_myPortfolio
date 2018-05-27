@@ -1,4 +1,4 @@
-@import "./reset.sass", "./variables.sass", "./mixins.sass"
+@import  "./mixins.sass", "./variables.sass", "./reset.sass"
 .pg-header
   background: $secondaryBg
   ul
@@ -30,16 +30,11 @@
     font-size: 1.5rem
     .overlay-l, .overlay-r
       @include flexColumn
-      @include halfOverlay
     .overlay-l
-      left: 0
-      background-color: rgba(0, 0, 0,.8)
       h2
         text-align: right
         margin-right: .3rem
     .overlay-r
-      right: 0
-      background-color: rgba(164, 3, 31, .8)
       h2
         text-align: left
         margin-left: .3rem
@@ -50,20 +45,34 @@
   .about-header
     background-color: $red
   .about-content
+    min-height: 9rem
+    position: relative
+    background-image: url(https://images.pexels.com/photos/968243/pexels-photo-968243.jpeg?cs=srgb&dl=alphabet-alphabets-black-board-968243.jpg&fm=jpg)
+    @include bgImg
     display: flex;
     font-size: .5rem
+    color: #fff
     text-align: center
     .about-intro, .about-skills
-      width: 50%
+      min-height: 5rem
+      .overlay-l, .overlay-r
+        width: 100%
+    .overlay-l
+      background-color: $overlayAlphaOne
+    .overlay-r
+      background-color: $overlayAlphaTwo
     .intro-header, .skills-header
       padding: .5rem 0
-      border-bottom: 2px solid $red
-    .skills-header, .skills-content
-      background: $alphaSecondary
-      color: #fff
+    .intro-header
+      border-bottom: 2px solid $overlayAlphaTwo
+    .skills-header
+      border-bottom: 2px solid $overlayAlphaOne
     .intro-content, .skills-content
       padding: 1rem
       height: 100%
+    .intro-content
+      p
+        margin-bottom: .5rem
     .skills-content
       position: relative
       .tab-selection
@@ -111,13 +120,16 @@
 #section-works
   .works-header
     background-color: $secondaryBg
-    margin-top: 1.5rem
+    // margin-top: 1.5rem
   .works-content
     padding: 1rem 6rem
     display: flex
     flex-wrap: wrap
     justify-content: space-around
     align-items: center
+    position: relative
+    background-image: url(https://images.pexels.com/photos/355988/pexels-photo-355988.jpeg?cs=srgb&dl=blackboard-business-chalkboard-355988.jpg&fm=jpg)
+    @include bgImg
     .fcc-weather
       background-image: url(https://image.ibb.co/msuDRT/fcc_weather.png)
     .fcc-wiki
@@ -135,25 +147,28 @@
       width: 7rem
       height: 7rem
       overflow: hidden
-      box-shadow: 2px 2px 5px #ccc
       @include bgImg
       &:hover
-        .overlay
-          height: 100%
+        .desc
+          opacity: 1
       .overlay
         position: absolute
         left: 0
         bottom: 0
         right: 0
-        height: 0
-        transition: height .5s
-        background: rgba(0, 0, 0, 0.8)
+        height: 100%
+        background: $overlayAlphaTwo
         &:hover
-          height: 100%
+          .desc
+            opacity: 1
+            height: 100%
         .desc
+          opacity: 0
+          height: 0
           margin-top: 1rem
           padding: .5rem
           color: #fff
+          transition: all .5s
           h3
             margin-bottom: .5rem
             font-size: .5rem
@@ -173,3 +188,52 @@
 #section-contact
   .contact-header
     background: $red
+  .contact-content
+    min-height: 16rem
+    position: relative
+    font-size: .5rem
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: #fff
+    background-image: url(https://images.pexels.com/photos/4831/hands-coffee-smartphone-technology.jpg?cs=srgb&dl=coffee-contact-email-4831.jpg&fm=jpg)
+    @include bgImg
+    .overlay-l
+      background-color: $overlayAlphaOne
+    .overlay-r
+      background-color: $overlayAlphaTwo
+    form, .contact-detail
+      padding: 1rem 1.5rem
+    input, textarea
+      width: 100%
+      display: block
+      border: 2px solid $red
+      padding: 0 .5rem
+      margin: .25rem 0 .5rem
+    textarea
+      height: 5rem
+    .seperator
+      margin: 0 .3rem
+    .btn-submit
+      width: 100%
+    .btn
+      padding: .2rem
+      background-color: #fff
+      color: $red
+      border: 2px solid $red
+      transition: all .5s
+      &:hover
+        background-color: $red
+        color: #fff
+
+    .contact-detail
+      p, li
+        margin-bottom: 1.5rem
+      button
+        vertical-align: middle
+      
+.pg-footer
+  @include secHeader
+  background: $secondaryBg
+  font-size: .5rem
+  
