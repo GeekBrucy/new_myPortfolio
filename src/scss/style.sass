@@ -45,7 +45,7 @@
   .about-header
     background-color: $red
   .about-content
-    min-height: 9rem
+    min-height: 10rem
     position: relative
     background-image: url(https://images.pexels.com/photos/968243/pexels-photo-968243.jpeg?cs=srgb&dl=alphabet-alphabets-black-board-968243.jpg&fm=jpg)
     @include bgImg
@@ -54,7 +54,7 @@
     color: #fff
     text-align: center
     .about-intro, .about-skills
-      min-height: 5rem
+      min-height: 7rem
       .overlay-l, .overlay-r
         width: 100%
     .overlay-l
@@ -100,7 +100,6 @@
         & > div
           display: none
       .tab-holder
-        height: 100%
         padding: .5rem 2rem
         flex-direction: row
         justify-content: space-around
@@ -108,10 +107,11 @@
         flex-wrap: wrap
         .skill-detail
           margin-right: 1rem
+          margin-bottom: .75rem
         .skill-name
           margin-bottom: .5rem
         .lose-mark
-          color: darken($secondaryBg, 10)
+          color: darken($secondaryBg, 1)
       input[type=radio]
         display: none
         &:checked + div
@@ -157,8 +157,9 @@
         bottom: 0
         right: 0
         height: 100%
-        background: $overlayAlphaTwo
+        background: rgba(0, 0, 0,.3)
         &:hover
+          background: rgba(0, 0, 0,.8)
           .desc
             opacity: 1
             height: 100%
