@@ -104,14 +104,12 @@ hr
 textarea
   resize: none
   width: 100%
+.overlay
+  @include fullOverlay
+  background-color: rgba(0, 0, 0, 0.8)
+.pic-overlay
+  transition: all .5s
+  @include picOverlay
+  background-color: rgba(0, 0, 0, 0.8)
 .hide
   display: none
-.overlay-l, .overlay-r
-  // @include flexColumn
-  @include halfOverlay
-.overlay-l
-  left: 0
-  background-color: $overlayAlphaTwo
-.overlay-r
-  right: 0
-  background-color: $overlayAlphaOne
