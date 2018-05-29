@@ -15,19 +15,7 @@
   <header class="pg-header">
     <div class="banner">
       <div class="overlay">
-        <nav>
-          <ul>
-            <li>
-              <a href="#section-about">About</a>
-            </li>
-            <li>
-              <a href="#section-works">Works</a>
-            </li>
-            <li>
-              <a href="#section-contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <i class="fas fa-angle-up back-top"></i>
         <div class="header-title">
           <h2 class="title-name">Peichun Zhou</h2>
           <div class="mock-search-bar">
@@ -417,18 +405,18 @@
       <h1>Contact</h1>
     </div>
     <div class="section-content contact-content">
-      <form>
+      <form id="send-email" method="POST" action="https://formspree.io/peichunzhou1006@gmail.com">
         <div class="form-group">
           <label for="contact-name">Your Name:</label>
-          <input class="form-control" id="contact-name" type="text" placeholder="Enter Your Name...">
+          <input class="form-control" name="name" id="contact-name" type="text" placeholder="Enter Your Name..." required>
         </div>
         <div class="form-group">
           <label for="contact-email">Your Email:</label>
-          <input class="form-control" id="contact-email" type="email" placeholder="Enter Your Email...">
+          <input class="form-control" id="contact-email" type="email" name="_replyto" placeholder="Enter Your Email..." required>
         </div>
         <div class="form-group">
           <label for="contact-msg">Your Message:</label>
-          <textarea placeholder="Enter Your Message..." id="contact-msg"></textarea>
+          <textarea name="message" placeholder="Enter Your Message..." id="contact-msg" required></textarea>
         </div>
         <input class="btn btn-submit" type="submit" value="Send">
       </form>

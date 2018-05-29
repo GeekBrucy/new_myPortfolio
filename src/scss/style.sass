@@ -1,25 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 @import  "./mixins.sass", "./variables.sass", "./reset.sass"
 .pg-header
-  ul
-    display: flex
-    justify-content: center
-  li
-    padding: .2rem .5rem
-  a
-    font-size: .5rem
+  .back-top
+    cursor: pointer
+    z-index: 1
+    text-align: center
+    position: fixed
+    height: 1.5rem
+    width: 1.5rem
+    bottom: .5rem
+    right: .5rem
     color: $grey
-    display: block
-    padding: .5rem
-    border-radius: .5rem
-    transition: all .5s
-    &:hover, &:active
-      background-color: $grey
-      color: $primaryBg
-    @include responsive(414px, 320px)
-      font-size: 1rem
-    @include responsive(1024px, 768px)
-      font-size: 1rem
+    background: $primaryBg
+    opacity: 0
+    transition: opacity .5s
   .banner
     position: relative
     min-height: 100vh
@@ -29,11 +23,6 @@
     font-size: 1.5rem
     .overlay
       background-color: rgba(0, 0, 0, 0.1)
-    nav
-      position: absolute
-      bottom: 0
-      left: 50%
-      transform: translateX(-50%)
     .header-title
       height: 100%
       align-items: center
@@ -58,7 +47,6 @@
         i
           color: #ccc
         h2
-          // color: $lightBlack
           display: inline-block
           &:after
             content: ""
@@ -132,7 +120,6 @@
         .lose-mark
           color: #ccc
         &:hover
-          background-color: #fff
           padding-top: .7rem
           .skill-mark
             opacity: 1
@@ -200,9 +187,15 @@
       width: 33%
       overflow: hidden
       @include bgImg
+      .pic-overlay
+        background-color: rgba(242, 238, 237, .7)
+        @include responsive(1024px)
+          background-color: rgba(37, 42, 52, .8)
       &:hover
         .desc
           opacity: 1
+        .pic-overlay
+          background-color: rgba(37, 42, 52, .8)
 #section-contact
   background: $greyBg
   .contact-content
