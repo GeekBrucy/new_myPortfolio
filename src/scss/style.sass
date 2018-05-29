@@ -4,13 +4,8 @@
   ul
     display: flex
     justify-content: center
-    @include responsive(414px, 320px)
-      flex-direction: column
   li
     padding: .2rem .5rem
-    @include responsive(414px, 320px)
-      width: 100%
-      text-align: center
   a
     font-size: .5rem
     color: $grey
@@ -22,6 +17,8 @@
       background-color: $grey
       color: $primaryBg
     @include responsive(414px, 320px)
+      font-size: 1rem
+    @include responsive(1024px, 768px)
       font-size: 1rem
   .banner
     position: relative
@@ -43,7 +40,6 @@
       @include flexColumn
       .title-name
         font-family: 'Courgette', cursive;
-        // color: $grey
         color: $lightBlack
       .mock-search-bar
         font-size: .85rem
@@ -55,6 +51,10 @@
         height: 1.4rem
         background-color: $grey
         font-size: .8rem
+        @include responsive(414px, 320px)
+          width: 90%
+        @include responsive(1024px, 768px)
+          width: 90%
         i
           color: #ccc
         h2
@@ -89,27 +89,43 @@
       font-size: 1rem
     .intro-content, .skills-content
       padding: .5rem 4.8rem
+
       p
         margin-bottom: .5rem
     .intro-content
       line-height: 1.5
+      @include responsive(414px, 320px)
+        padding: .5rem 2rem
+      @include responsive(1024px, 768px)
+        padding: .5rem 2rem
     .skills-content
       display: flex
       flex-direction: row
       justify-content: space-around
       align-items: center
       flex-wrap: wrap
+      @include responsive(414px, 320px)
+        padding: .5rem
+      @include responsive(1024px, 768px)
+        padding: .4rem
       .skill-detail
         background-color: $grey
         border-radius: .5rem
         padding-top: 1.2rem
-        // color: $primaryBg
         width: 4.5rem
         height: 2.84rem
         margin-bottom: .25rem
         transition: all .5s
+        @include responsive(414px, 320px)
+          padding-top: .7rem
+        @include responsive(1024px, 768px)
+          padding-top: .7rem
         .skill-mark
           opacity: 0
+          @include responsive(414px, 320px)
+            opacity: 1
+          @include responsive(1024px, 768px)
+            opacity: 1
           transition: opacity .5s
         .skill-name
           margin-bottom: .5rem
@@ -148,20 +164,34 @@
       color: $grey
       margin: 0 auto
       transition: opacity .5s
+      @include responsive(414px, 320px)
+        opacity: 1
+        padding-top: 2rem
+      @include responsive(1024px, 768px)
+        opacity: 1
+        padding-top: 1rem
       h3
-        margin-bottom: .5rem
+        margin-bottom: .7rem
         font-size: .5rem
       p
         margin-bottom: .5rem
         line-height: 1.5
         font-size: .4rem
+        @include responsive(414px, 320px)
+          display: none
+          margin-bottom: 0
         span
           margin-right: .5rem
           &:last-child
             margin-right: 0
-        a
-          font-size: .5rem
-          color: $grey
+      a
+        font-size: .5rem
+        color: $grey
+        @include responsive(414px, 320px)
+          padding: .2rem
+          background-color: #fff
+          color: $primaryBg
+          border: 2px solid $primaryBg
     .work-detail
       position: relative
       text-align: center
@@ -183,9 +213,17 @@
     display: flex
     justify-content: space-around
     align-items: start
+    @include responsive(414px, 320px)
+      padding: .5rem
+    @include responsive(1024px, 768px)
+      padding: .5rem
     form, .contact-detail
       width: 50%
       padding: 0 1.5rem
+      @include responsive(414px, 320px)
+        padding: .5rem
+      @include responsive(1024px, 768px)
+        padding: .5rem
     input, textarea
       width: 100%
       display: block
@@ -193,9 +231,12 @@
       padding: 0 .5rem
       margin: .25rem 0 .5rem
       transition: all .5s
+      @include responsive(414px, 320px)
+        font-size: .25rem
     input:focus
         padding: .25rem .5rem
     textarea
+      padding-top: .5rem
       height: 5rem
     .btn-submit
       width: 100%
