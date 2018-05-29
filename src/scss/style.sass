@@ -11,13 +11,13 @@
     bottom: .5rem
     right: .5rem
     color: $grey
-    background: $primaryBg
+    background: $lightBlack
     opacity: 0
     transition: opacity .5s
   .banner
     position: relative
     min-height: 100vh
-    background-image: url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?cs=srgb&dl=blank-business-composition-373076.jpg&fm=jpg)
+    background-image: url(https://image.ibb.co/mG6eay/bannerbg.jpg)
     background-attachment: fixed
     @include bgImg
     font-size: 1.5rem
@@ -34,7 +34,7 @@
         font-size: .85rem
         box-shadow: 0 2px 16px 3px #a4a4a4, 0 0 16px 3px #a4a4a4, 0 0 16px 3px #a4a4a4;  
         margin-top: .5rem
-        color: $primaryBg
+        color: $lightBlack
         padding: .3rem
         width: 50%
         height: 1.4rem
@@ -64,7 +64,7 @@
   @include secHeader
 #section-about
   // min-height: 100vh
-  color: $primaryBg
+  color: $lightBlack
   .about-content
     display: flex;
     flex-direction: column
@@ -77,7 +77,6 @@
       font-size: 1rem
     .intro-content, .skills-content
       padding: .5rem 4.8rem
-
       p
         margin-bottom: .5rem
     .intro-content
@@ -125,7 +124,7 @@
             opacity: 1
 // END of about section
 #section-works
-  color: $primaryBg
+  color: $lightBlack
   padding-bottom: .6rem
   .works-content
     padding-bottom: .1rem
@@ -176,9 +175,9 @@
         color: $grey
         @include responsive(414px, 320px)
           padding: .2rem
-          background-color: #fff
-          color: $primaryBg
-          border: 2px solid $primaryBg
+          background-color: $grey
+          color: $lightBlack
+          border: 2px solid $lightBlack
     .work-detail
       position: relative
       text-align: center
@@ -187,20 +186,13 @@
       width: 33%
       overflow: hidden
       @include bgImg
-      .pic-overlay
-        background-color: rgba(242, 238, 237, .7)
-        @include responsive(1024px)
-          background-color: rgba(37, 42, 52, .8)
       &:hover
         .desc
           opacity: 1
-        .pic-overlay
-          background-color: rgba(37, 42, 52, .8)
 #section-contact
   background: $greyBg
   .contact-content
     padding: .5rem 4.8rem
-    // min-height: 16rem
     position: relative
     font-size: .5rem
     display: flex
@@ -218,9 +210,10 @@
       @include responsive(1024px, 768px)
         padding: .5rem
     input, textarea
+      background: $grey
       width: 100%
       display: block
-      border: 2px solid $primaryBg
+      border: 2px solid $lightBlack
       padding: 0 .5rem
       margin: .25rem 0 .5rem
       transition: all .5s
@@ -235,13 +228,13 @@
       width: 100%
     .btn
       padding: .2rem
-      background-color: #fff
-      color: $primaryBg
-      border: 2px solid $primaryBg
+      background-color: $grey
+      color: $lightBlack
+      border: 2px solid $lightBlack
       transition: all .5s
       &:hover
-        background-color: $primaryBg
-        color: #fff
+        background-color: $lightBlack
+        color: $grey
     .contact-detail
       li
         margin-bottom: 1rem
@@ -249,8 +242,8 @@
         vertical-align: middle
       
 .pg-footer
-  color: #fff
+  color: $grey
   @include secHeader
-  background: $primaryBg
+  background: $lightBlack
   font-size: .5rem
   
