@@ -97,6 +97,7 @@ body
   font-size: .28em
   line-height: 1
   -webkit-text-size-adjust: none
+  background-color: $grey
 
 hr
   height: .02rem
@@ -111,7 +112,10 @@ textarea
   background-color: rgba(0, 0, 0, 0.8)
 .pic-overlay
   transition: all .5s
-  @include picOverlay
-  background-color: rgba(0, 0, 0, 0.8)
+  @include fullOverlay
+  background-color: rgba(1, 1, 1, 0.8)
 .hide
   display: none
+
+a:active, a:visited
+  color: $primaryBg

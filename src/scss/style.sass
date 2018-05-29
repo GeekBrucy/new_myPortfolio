@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 @import  "./mixins.sass", "./variables.sass", "./reset.sass"
 .pg-header
   ul
@@ -12,99 +13,122 @@
       text-align: center
   a
     font-size: .5rem
-    color: $mainFontColor
+    color: $grey
     display: block
     padding: .5rem
+    border-radius: .5rem
     transition: all .5s
     &:hover, &:active
-      background-color: $mainFontColor
+      background-color: $grey
       color: $primaryBg
     @include responsive(414px, 320px)
       font-size: 1rem
   .banner
-    color: $mainFontColor
     position: relative
     min-height: 100vh
-    background-image: url(https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?cs=srgb&dl=blurred-background-close-up-coffee-cup-908284.jpg&fm=jpg)
+    background-image: url(https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?cs=srgb&dl=blank-business-composition-373076.jpg&fm=jpg)
+    background-attachment: fixed
     @include bgImg
     font-size: 1.5rem
-    .seperator
+    .overlay
+      background-color: rgba(0, 0, 0, 0.1)
+    nav
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+    .header-title
       height: 100%
+      align-items: center
       @include flexColumn
+      .title-name
+        font-family: 'Courgette', cursive;
+        // color: $grey
+        color: $lightBlack
+      .mock-search-bar
+        font-size: .85rem
+        box-shadow: 0 2px 16px 3px #a4a4a4, 0 0 16px 3px #a4a4a4, 0 0 16px 3px #a4a4a4;  
+        margin-top: .5rem
+        color: $primaryBg
+        padding: .3rem
+        width: 50%
+        height: 1.4rem
+        background-color: $grey
+        font-size: .8rem
+        i
+          color: #ccc
+        h2
+          // color: $lightBlack
+          display: inline-block
+          &:after
+            content: ""
+            display: inline-block
+            width: .1rem
+            height: .7rem
+            vertical-align: baseline
+            margin-left: .2rem
+            background-color: $lightBlack
+            animation: flash infinite 1s
+        .right
+          float: right
 // END of pg-header
 .section-header
   @include secHeader
 #section-about
+  // min-height: 100vh
+  color: $primaryBg
   .about-content
-    min-height: 10rem
     display: flex;
+    flex-direction: column
     font-size: .5rem
     text-align: center
-    .about-intro, .about-skills
-      min-height: 7rem
-      width: 50%
+    .about-skills
+      background-color: $greyBg
     .intro-header, .skills-header
       padding: .5rem 0
+      font-size: 1rem
     .intro-content, .skills-content
-      padding: 1rem
-      height: 100%
-    .intro-content
+      padding: .5rem 4.8rem
       p
         margin-bottom: .5rem
+    .intro-content
+      line-height: 1.5
     .skills-content
-      position: relative
-      .tab-selection
-        width: 100%
-        position: absolute
-        top: 0
-        padding: .25rem 0
-        left: 50%
-        transform: translateX(-50%)
-        label
-          cursor: pointer
-          padding: 0 .5rem
-          border-radius: .3rem
-          transition: all ease .5s
-          &.active, &:hover
-            background-color: $primaryBg
-            color: #fff
-      .tab-content
-        position: absolute
-        top: 1rem
-        left: 0
-        right: 0
-        bottom: 0
-        width: 100%
-        & > div
-          display: none
-      .tab-holder
-        padding: .5rem 2rem
-        flex-direction: row
-        justify-content: space-around
-        align-items: center
-        flex-wrap: wrap
-        .skill-detail
-          margin-right: 1rem
-          margin-bottom: .75rem
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      flex-wrap: wrap
+      .skill-detail
+        background-color: $grey
+        border-radius: .5rem
+        padding-top: 1.2rem
+        // color: $primaryBg
+        width: 4.5rem
+        height: 2.84rem
+        margin-bottom: .25rem
+        transition: all .5s
+        .skill-mark
+          opacity: 0
+          transition: opacity .5s
         .skill-name
           margin-bottom: .5rem
         .lose-mark
           color: #ccc
-      input[type=radio]
-        display: none
-        &:checked + div
-          display: flex
+        &:hover
+          background-color: #fff
+          padding-top: .7rem
+          .skill-mark
+            opacity: 1
 // END of about section
 #section-works
-  background-color: $primaryBg
-  .works-header
-    color: #fff
+  color: $primaryBg
+  padding-bottom: .6rem
   .works-content
-    padding: 1rem 6rem
+    padding-bottom: .1rem
     display: flex
     flex-wrap: wrap
     justify-content: space-around
-    align-items: center
     @include bgImg
     .fcc-weather
       background-image: url(https://image.ibb.co/msuDRT/fcc_weather.png)
@@ -121,7 +145,8 @@
     .desc
       opacity: 0
       padding: .5rem
-      color: #fff
+      color: $grey
+      margin: 0 auto
       transition: opacity .5s
       h3
         margin-bottom: .5rem
@@ -136,43 +161,42 @@
             margin-right: 0
         a
           font-size: .5rem
-          color: #fff
+          color: $grey
     .work-detail
       position: relative
       text-align: center
-      margin-bottom: .75rem
-      width: 7rem
+      margin-bottom: .1rem
       height: 7rem
+      width: 33%
       overflow: hidden
       @include bgImg
       &:hover
         .desc
           opacity: 1
-        .pic-overlay
-          opacity: 1
-          width: 90%
-          height: 90%
 #section-contact
+  background: $greyBg
   .contact-content
-    min-height: 16rem
+    padding: .5rem 4.8rem
+    // min-height: 16rem
     position: relative
     font-size: .5rem
     display: flex
     justify-content: space-around
-    align-items: center
+    align-items: start
     form, .contact-detail
       width: 50%
-      padding: 1rem 1.5rem
+      padding: 0 1.5rem
     input, textarea
       width: 100%
       display: block
       border: 2px solid $primaryBg
       padding: 0 .5rem
       margin: .25rem 0 .5rem
+      transition: all .5s
+    input:focus
+        padding: .25rem .5rem
     textarea
       height: 5rem
-    .seperator
-      margin: 0 .3rem
     .btn-submit
       width: 100%
     .btn
@@ -185,8 +209,8 @@
         background-color: $primaryBg
         color: #fff
     .contact-detail
-      p, li
-        margin-bottom: 1.5rem
+      li
+        margin-bottom: 1rem
       button
         vertical-align: middle
       
