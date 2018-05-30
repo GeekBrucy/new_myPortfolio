@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 prepros-6.config
 /.cache/
+/scss/
 
 # Editor directories and files
 .idea
