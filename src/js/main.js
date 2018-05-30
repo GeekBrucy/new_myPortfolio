@@ -14,9 +14,11 @@ $(document).ready(function () {
   $(window).scroll(function () {
     var pos = document.documentElement.scrollTop
     if (pos > 200) {
-      $('.back-top').attr('style', 'opacity: 0.8')
+      $('.back-top').attr('style', 'visibility: visible')
+      $('.back-top').attr('style', 'opacity: 1')
     } else {
       $('.back-top').attr('style', 'opacity: 0')
+      $('.back-top').attr('style', 'visibility: hidden')
     }
   })
   $('#send-email').submit(function (e) {
