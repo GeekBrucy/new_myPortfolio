@@ -21,20 +21,4 @@ $(document).ready(function () {
       $('.back-top').attr('style', 'visibility: hidden')
     }
   })
-  $('#send-email').submit(function (e) {
-    var name = document.getElementById('contact-name'),
-      email = document.getElementById('contact-email'),
-      msg = document.getElementById('contact-msg')
-    if (!name.value || !email.value || !msg.value) {
-      alert('Please Enter the filed!')
-    } else {
-      $.ajax({
-        url: "https://formspree.io/peichunzhou1006@gmail.com",
-        method: "POST",
-        data: $(this).serialize(),
-        dataType: "json"
-      });
-      e.preventDefault()
-    }
-  })
 })
